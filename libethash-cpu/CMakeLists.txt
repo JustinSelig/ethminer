@@ -1,4 +1,4 @@
-file(GLOB sources "*.cpp")
+file(GLOB sources "*.cpp" "*.c")
 file(GLOB headers "*.h")
 
 add_library(ethash-cpu ${sources} ${headers})

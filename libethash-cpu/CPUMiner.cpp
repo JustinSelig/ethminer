@@ -277,6 +277,10 @@ void CPUMiner::search(const dev::eth::WorkPackage& w)
         if (shouldStop())
             break;
 
+        //justin test code
+        uint8_t arr[32];
+        sha3_HashBuffer(256, SHA3_FLAGS_KECCAK, "abc", 3, arr, sizeof(arr));
+        // end justin test code
 
         auto r = ethash::search(context, header, boundary, nonce, blocksize);
         if (r.solution_found)
